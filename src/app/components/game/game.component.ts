@@ -19,17 +19,24 @@ export class GameComponent implements OnInit {
 
   getNextValue(value) {
     if(value=="" && !this.gameEnds()) {
-      if(this.turn ==this.players[0]) {
-        this.turn = this.players[1];
+      if(this.turn == this.players[0]) {
         return "x";
       }
       else {
-        this.turn = this.players[0];
         return "o";
       }
     }
     else {
       return value;
+    }
+  }
+
+  switchTurn() {
+    if(this.turn == this.players[0]) {
+      this.turn = this.players[1];
+    }
+    else {
+      this.turn = this.players[0];
     }
   }
 
@@ -39,37 +46,64 @@ export class GameComponent implements OnInit {
 
   toggle00() {
     this.values[0][0] = this.getNextValue(this.values[0][0]);
+    if(!this.gameEnds()) {
+      this.switchTurn();
+    }
   }
   toggle01() {
     this.values[0][1] = this.getNextValue(this.values[0][1]);
+    if(!this.gameEnds()) {
+      this.switchTurn();
+    }
 
   }
   toggle02() {
     this.values[0][2] = this.getNextValue(this.values[0][2]);
+    if(!this.gameEnds()) {
+      this.switchTurn();
+    }
 
   }
   toggle10() {
     this.values[1][0] = this.getNextValue(this.values[1][0]);
+    if(!this.gameEnds()) {
+      this.switchTurn();
+    }
 
   }
   toggle11() {
     this.values[1][1] = this.getNextValue(this.values[1][1]);
+    if(!this.gameEnds()) {
+      this.switchTurn();
+    }
 
   }
   toggle12() {
     this.values[1][2] = this.getNextValue(this.values[1][2]);
+    if(!this.gameEnds()) {
+      this.switchTurn();
+    }
 
   }
   toggle20() {
     this.values[2][0] = this.getNextValue(this.values[2][0]);
+    if(!this.gameEnds()) {
+      this.switchTurn();
+    }
 
   }
   toggle21() {
     this.values[2][1] = this.getNextValue(this.values[2][1]);
+    if(!this.gameEnds()) {
+      this.switchTurn();
+    }
 
   }
   toggle22() {
     this.values[2][2] = this.getNextValue(this.values[2][2]);
+    if(!this.gameEnds()) {
+      this.switchTurn();
+    }
 
   }
   firstRow() {

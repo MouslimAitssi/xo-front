@@ -1,5 +1,6 @@
 <div class="container">
-  <h2>It is {{turn}}'s turn</h2>
+  <h2 *ngIf="!gameEnds()">It is {{turn}}'s turn</h2>
+  <h2 *ngIf="gameEnds()">{{turn}} wins</h2>
   <div class="row">
     <div class="cube" (click)="toggle00()">
       <div class="value">{{values[0][0]}}</div>
