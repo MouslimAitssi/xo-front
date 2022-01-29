@@ -1,0 +1,27 @@
+.cube {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid;
+}
+.cube:hover {
+  background-color: aqua;
+}
+
+.value {
+  font-size: 700%;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  text-align: center;
+}
+button {
+  margin-top: 10%;
+}

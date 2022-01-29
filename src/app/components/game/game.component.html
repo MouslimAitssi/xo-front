@@ -1,0 +1,39 @@
+<div class="container">
+  <h2>It is {{turn}}'s turn</h2>
+  <div class="row">
+    <div class="cube" (click)="toggle00()">
+      <div class="value">{{values[0][0]}}</div>
+    </div>
+    <div class="cube" (click)="toggle01()">
+      <div class="value">{{values[0][1]}}</div>
+    </div>
+    <div class="cube" (click)="toggle02()">
+      <div class="value">{{values[0][2]}}</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="cube" (click)="toggle10()">
+      <div class="value">{{values[1][0]}}</div>
+    </div>
+    <div class="cube" (click)="toggle11()">
+      <div class="value">{{values[1][1]}}</div>
+    </div>
+    <div class="cube" (click)="toggle12()">
+      <div class="value">{{values[1][2]}}</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="cube" (click)="toggle20()">
+      <div class="value">{{values[2][0]}}</div>
+    </div>
+    <div class="cube" (click)="toggle21()">
+      <div class="value">{{values[2][1]}}</div>
+    </div>
+    <div class="cube" (click)="toggle22()">
+      <div class="value">{{values[2][2]}}</div>
+    </div>
+  </div>
+  <button (click)="newGame()" class="btn btn-success">New Game</button>
+</div>
