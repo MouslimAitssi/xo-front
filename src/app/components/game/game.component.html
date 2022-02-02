@@ -3,37 +3,37 @@
   <h2 *ngIf="somebodyWins()">{{turn}} wins</h2>
   <h2 *ngIf="equality()">Equality</h2>
   <div class="row">
-    <div class="cube" (click)="toggle00()">
+    <div class="cube" [ngClass]="{'selected-cube': firstRow()||firstColumn()||firstDiag()}" (click)="toggle00()">
       <div class="value">{{values[0][0]}}</div>
     </div>
-    <div class="cube" (click)="toggle01()">
+    <div class="cube" [ngClass]="{'selected-cube': firstRow()||secondColumn()}" (click)="toggle01()">
       <div class="value">{{values[0][1]}}</div>
     </div>
-    <div class="cube" (click)="toggle02()">
+    <div class="cube" [ngClass]="{'selected-cube': firstRow()||thirdColumn()||secondDiag()}" (click)="toggle02()">
       <div class="value">{{values[0][2]}}</div>
     </div>
   </div>
 
   <div class="row">
-    <div class="cube" (click)="toggle10()">
+    <div class="cube" [ngClass]="{'selected-cube': secondRow()||firstColumn()}" (click)="toggle10()">
       <div class="value">{{values[1][0]}}</div>
     </div>
-    <div class="cube" (click)="toggle11()">
+    <div class="cube" [ngClass]="{'selected-cube': secondRow()||secondColumn()||firstDiag()||secondDiag()}" (click)="toggle11()">
       <div class="value">{{values[1][1]}}</div>
     </div>
-    <div class="cube" (click)="toggle12()">
+    <div class="cube" [ngClass]="{'selected-cube': secondRow()||thirdColumn()}"(click)="toggle12()">
       <div class="value">{{values[1][2]}}</div>
     </div>
   </div>
 
   <div class="row">
-    <div class="cube" (click)="toggle20()">
+    <div class="cube" [ngClass]="{'selected-cube': thirdRow()||firstColumn()||secondDiag()}" (click)="toggle20()">
       <div class="value">{{values[2][0]}}</div>
     </div>
-    <div class="cube" (click)="toggle21()">
+    <div class="cube" [ngClass]="{'selected-cube': thirdRow()||secondColumn()}" (click)="toggle21()">
       <div class="value">{{values[2][1]}}</div>
     </div>
-    <div class="cube" (click)="toggle22()">
+    <div class="cube" [ngClass]="{'selected-cube': thirdRow()||thirdColumn()||firstDiag()}" (click)="toggle22()">
       <div class="value">{{values[2][2]}}</div>
     </div>
   </div>
