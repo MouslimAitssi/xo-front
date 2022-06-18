@@ -1,14 +1,4 @@
-#FROM node:18-alpine3.15 as builder
-
-#RUN mkdir -p target
-
-#WORKDIR /target
-
-#COPY . /target/
-
-#RUN npm install
-
-#RUN npm run build
+#The project was builded manually
 
 FROM nginx:alpine
 
